@@ -1,8 +1,12 @@
 name: First Workflow
 
 on: 
-  pull_request:
-   types: [opened, synchronize, closed, labeled, assigned, edited]
+  push:
+   branches: 
+    - main
+    - 'feature**'
+   paths-ignore:
+    - 'docs/**'
 
 jobs:
  build:
