@@ -1,7 +1,14 @@
 name: First Workflow
 
 on: 
-  workflow_dispatch
+  push:
+   branches: 
+    - main
+    - 'feature**'
+   paths-ignore:
+    - 'docs/**'
+   tags-ignore:
+    - 'test_ignore_workflow'
 
 jobs:
  build:
