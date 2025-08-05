@@ -11,6 +11,8 @@ on:
     - 'docs/**'
    tags-ignore:
     - 'test_ignore_workflow'
+  pull_request:
+   types: [opened, synchronize, closed, labeled, assigned, edited]
   workflow_dispatch:
 
 jobs:
